@@ -1,5 +1,6 @@
 use std::time::Duration;
 use std::thread::sleep;
+use std::io::{self, Write};
 
 pub struct Countdown {
     duration: usize,
@@ -17,6 +18,7 @@ impl Countdown {
             self.countdown_one_second_from(&duration_remaining);
             duration_remaining -= 1;
         }
+        println!("");
     }
 
     //-------- private ----------//
@@ -26,6 +28,7 @@ impl Countdown {
         print!("{}", start_second);
         for _ in 1..3 {
             print!(".");
+            io::stdout().flush().unwrap();
             sleep(quarter_of_second);
         }
     }
