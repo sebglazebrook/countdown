@@ -1,7 +1,7 @@
 use std::time::Duration;
 use std::thread::sleep;
 
-struct Countdown {
+pub struct Countdown {
     duration: usize,
 }
 
@@ -24,7 +24,7 @@ impl Countdown {
     fn countdown_one_second_from(&self, start_second: &usize) {
         let quarter_of_second = Duration::from_millis(250);
         print!("{}", start_second);
-        for _ in (1..3) {
+        for _ in 1..3 {
             print!(".");
             sleep(quarter_of_second);
         }
