@@ -2,6 +2,26 @@
 name = "countdown"
 version = "0.1.0"
 authors = ["Seb Glazebrook <sebastian.glazebrook@redbubble.com>"]
+description = "A simple countdown timer"
+
+# These URLs point to more information about the repository
+documentation = "https://github.com/sebglazebrook/countdown"
+homepage = "https://github.com/sebglazebrook/countdown"
+repository = "https://github.com/sebglazebrook/countdown"
+
+# This points to a file in the repository (relative to this Cargo.toml). The
+# contents of this file are stored and indexed in the registry.
+readme = "README.md"
+
+# This is a small list of keywords used to categorize and search for this
+# package.
+keywords = ["countdown", "timer"]
+
+# This is a string description of the license for this package. Currently
+# crates.io will validate the license provided against a whitelist of known
+# license identifiers from http://spdx.org/licenses/. Multiple licenses can
+# be separated with a `/`
+license = "MIT"
 
 [dependencies]
 
